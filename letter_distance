@@ -1,0 +1,10 @@
+def letter_distance(str1, str2):
+
+    total_dist=0
+    for i in range(len(str1)):
+        total_dist+=min(abs(ord(str2[i])-ord(str1[i])),26-abs(ord(str2[i])-ord(str1[i])))
+
+    return total_dist
+
+
+print(letter_distance("abc","xyz"))
