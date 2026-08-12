@@ -1,0 +1,18 @@
+def last_known_good(left, right):
+    result = []
+    
+    L = len(left)
+    R = len(right)
+    n = max(L, R)
+
+    last_left = None if L == 0 else left[0]
+    last_right = None if R == 0 else right[0]
+
+    for i in range(n):
+        if i < L:
+            last_left = left[i]
+        if i < R:
+            last_right = right[i]
+        result.append([last_left, last_right])
+
+    return result
